@@ -10,9 +10,9 @@
     <table class="table table-bordered table-info mt-5 text-center">
     <thead>
         <tr>
-        <th scope="col">Nombre</th>
-        <th scope="col">Descripcion</th>
-        <th scope="col">Precio</th>
+        <th scope="col">Nombre Platillo o Bebida</th>
+        <th scope="col">Descripcion </th>
+        <th scope="col">  Precio Total  </th>
         <th scope="col">Agrear al Menu</th>
         </tr>
     </thead>
@@ -32,14 +32,11 @@
         {{alimento.precio}}
         </td>
         <td>
-        {% comment %} <a href="" class="btn btn-outline-dark mt-5">Agregar</a> {% endcomment %}
+        {% comment %} <a href=" {% url 'aplication:crear' %}" class="btn btn-outline-dark mt-5">Agregar</a> {% endcomment %}
         <a href=" {% url 'aplication:crear' %}" class="btn btn-outline-dark mt-5">Agregar</a>
 
-        {% comment %} <a href=" {% url 'aplication:detalle' alimento.id %}" class="btn btn-outline-dark mt-5">Agregar</a> {% endcomment %}
         </td>
-        {% comment %} <td>
-        <a href=" {% url 'aplication:crear' %}" class="btn btn-outline-dark mt-5">Crear Nuevo</a>
-        </td> {% endcomment %}
+       
         </tr>
     {% endfor %}
 
