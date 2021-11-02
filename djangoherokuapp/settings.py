@@ -26,8 +26,9 @@ SECRET_KEY = 'v4es(%n!x-y2&+x=si&qkzshw@eboqv-8m=n*l+(e$%a(*sl2#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cadenarestaurantes.herokuapp.com']
+# ALLOWED_HOSTS = []
 
+ALLOWED_HOSTS = ['cadenarestaurantes.herokuapp.com']
 
 # Application definition
 
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'herokuapp',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -57,7 +60,7 @@ ROOT_URLCONF = 'djangoherokuapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

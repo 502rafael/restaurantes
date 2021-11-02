@@ -14,8 +14,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path , include
 
+app_name = 'aplication'
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('herokuapp.urls'))
+
+    # path("", v.inicio, name = "inicio"),
+    # path("detail_<int:id>/", v.detail, name = "detalle"),
+    # path("agregar/", v.crear, name = "crear")
 ]
